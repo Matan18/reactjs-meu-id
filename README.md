@@ -29,3 +29,7 @@ Além da função `onFinish`, existem também as funções `onLoad` e `onMessage
 * A função `onMessage` é chamada quando o popup envia uma mensagem para o seu site, que não se encaixa nem em `onLoad`, nem em `onFinish`;
 
 O botão já possui estilo próprio, mas você pode substituílos passando uma dessas propriedades: `styles` ou `className`
+
+## License
+
+[MIT](/LICENSE)

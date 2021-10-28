@@ -60,5 +60,5 @@ export type IMeuIdButton = React.ButtonHTMLAttributes<HTMLButtonElement> & {
   /**
    * Função chamada após receber algum postMessage que não se encaixe no onFinish, ou no onLoad
    */
-  onError?: (data: unknown) => void;
+  onMessage?: (data: unknown) => void;
 };

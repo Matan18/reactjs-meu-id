@@ -47,7 +47,7 @@ export function MeuIdButton({
   style,
   className,
   onFinish,
-  onError,
+  onMessage,
   onLoad,
   ...rest
 }: IMeuIdButton): JSX.Element {
@@ -86,7 +86,7 @@ export function MeuIdButton({
         messageHandler[data.message](data as ILoadData);
         return;
       }
-      if (onError) onError(event);
+      if (onMessage) onMessage(event);
     });
   };
   return (

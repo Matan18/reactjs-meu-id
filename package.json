@@ -3,6 +3,13 @@
   "version": "1.0.0",
   "description": "Componente para implementar meuId em sua aplicação react",
   "author": "Mateus Andriola <mateusandriola18@gmail.com>",
+  "keywords": [
+    "meuid",
+    "meu-id",
+    "meuId",
+    "idwall",
+    "idWall"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Matan18/react-meu-id.git"

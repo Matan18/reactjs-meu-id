@@ -1,6 +1,6 @@
 # react-meu-id
 
-## [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE) [![npm version](https://img.shields.io/npm/v/react-meu-id.svg?style=flat)](https://www.npmjs.com/package/react-meu-id)
+## [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 
 Essa é uma biblioteca para implementar o login social com [meuId](https://meuid.com.br/) no frontend, reduzindo a implementação a simples tratamento de um evento chamado `onFinish`, que será chamado pelo componente quando ele receber a mensagem do meuId
 

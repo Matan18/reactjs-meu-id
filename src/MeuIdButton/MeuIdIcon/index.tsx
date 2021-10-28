@@ -1,8 +1,14 @@
 import React from 'react';
+import { ThemeOptions } from '../../types';
+import styles from './styles.module.css';
 
-export const MeuIdIcon = (
+type MeuIdIconProps = {
+  theme?: ThemeOptions;
+};
+
+export const MeuIdIcon = ({ theme }: MeuIdIconProps): JSX.Element => (
   <svg
-    className="btn-meuid-svg"
+    className={[styles.container, styles[theme || '']].join(' ')}
     width="24"
     height="24"
     viewBox="0 0 24 24"

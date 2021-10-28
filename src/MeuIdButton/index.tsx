@@ -47,10 +47,14 @@ export function MeuIdButton({
   appId = '4a33541c-0465-4d6d-8744-c42f217807c4',
   windowStyle,
   style,
+  preseveIcon,
   className,
   onFinish,
   onMessage,
   onLoad,
+  theme,
+  size,
+  text,
   ...rest
 }: IMeuIdButton): JSX.Element {
   const handleClick = () => {
@@ -96,13 +100,24 @@ export function MeuIdButton({
       type="button"
       style={style}
       onClick={handleClick}
-      className={className ?? styles.buttonContainer}
+      className={
+        className ??
+        [styles.buttonContainer, styles[theme || ''], styles[size || '']].join(
+          ' ',
+        )
+      }
       {...rest}
     >
-      {children ?? (
+      {children ? (
         <>
-          {MeuIdIcon}
-          &nbsp; Login com MeuID
+          {preseveIcon && <MeuIdIcon theme={theme} />}
+          {children}
+        </>
+      ) : (
+        <>
+          <MeuIdIcon theme={theme} />
+          &nbsp;
+          {text || 'Login com MeuID'}
         </>
       )}
     </button>

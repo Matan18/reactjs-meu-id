@@ -39,6 +39,8 @@ export type MessageHandler = {
   'meuidlogin:load': (load: ILoadData) => void;
 };
 
+export type ThemeOptions = 'white' | 'regular' | 'white-borderless';
+
 export type IMeuIdButton = React.ButtonHTMLAttributes<HTMLButtonElement> & {
   children?: React.ReactNode;
 
@@ -47,7 +49,25 @@ export type IMeuIdButton = React.ButtonHTMLAttributes<HTMLButtonElement> & {
   targetName?: string;
 
   windowStyle?: WindowStyle;
-
+  /**
+   * Opção de cor padrão do botão.
+   * **OBS:** Desativado quando possui className
+   */
+  theme?: ThemeOptions;
+  /**
+   * Opção de tamanho padrão do botão
+   * **Desativado quando possui className**
+   */
+  size?: 'small' | 'large';
+  /**
+   * Texto para substituir mensagem padrão no botão
+   */
+  text?: string;
+  /*
+   * Ativando essa opção, o ícone da MeuID vai se manter
+   * **OBS:** Cores desativadas quando possui className
+   */
+  preseveIcon?: true;
   /**
    * Função chamada após a validação do usuário,
    *  enviando os dados vindos do popup

@@ -16,6 +16,17 @@
   cursor: pointer;
 }
 
-.buttonContainer > svg {
-  margin-right: 10px;
+.buttonContainer.white {
+  border: 1px solid #5500ff;
+}
+
+.buttonContainer.white,
+.buttonContainer.white-borderless {
+  background-color: #ffffff;
+  color: #5500ff;
+}
+
+.buttonContainer.small {
+  height: 40px;
+  width: 190px;
 }

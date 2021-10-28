@@ -1,0 +1,9 @@
+.container {
+  margin-right: 10px;
+}
+
+.white,
+.white-borderless {
+  color: #5500ff;
+  fill: #5500ff;
+}

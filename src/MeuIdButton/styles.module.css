@@ -1,0 +1,21 @@
+.buttonContainer {
+  background: #5500ff;
+  color: #ffffff;
+  border-radius: 5px;
+  border: none;
+  height: 44px;
+  width: 242px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.buttonContainer > svg {
+  margin-right: 10px;
+}

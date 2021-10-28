@@ -8,6 +8,7 @@ import {
   MessageOptions,
 } from '../types';
 import { MeuIdIcon } from './MeuIdIcon';
+import styles from './styles.module.css';
 
 const POPUP_URL = 'https://login.meuid.com.br';
 // const PUSHER_KEY = 'baf85c41e15d6a11b1ee';
@@ -95,7 +96,7 @@ export function MeuIdButton({
       type="button"
       style={style}
       onClick={handleClick}
-      className={[className].join(' ')}
+      className={className ?? styles.buttonContainer}
       {...rest}
     >
       {children ?? (

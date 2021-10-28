@@ -7,6 +7,7 @@ import {
   MessageHandler,
   MessageOptions,
 } from '../types';
+import { MeuIdIcon } from './MeuIdIcon';
 
 const POPUP_URL = 'https://login.meuid.com.br';
 // const PUSHER_KEY = 'baf85c41e15d6a11b1ee';
@@ -97,7 +98,12 @@ export function MeuIdButton({
       className={[className].join(' ')}
       {...rest}
     >
-      {children}
+      {children ?? (
+        <>
+          {MeuIdIcon}
+          &nbsp; Login com MeuID
+        </>
+      )}
     </button>
   );
 }

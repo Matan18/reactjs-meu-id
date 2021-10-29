@@ -85,7 +85,7 @@ export function MeuIdButton({
       },
     };
 
-    window.addEventListener('message', event => {
+    const handleMessage = (event: MessageEvent) => {
       const { data } = event as { data: { message: MessageOptions } & unknown };
       if (data.message === 'meuidlogin:finish') {
         messageHandler['meuidlogin:finish'](data as IFinishData);
@@ -96,6 +96,12 @@ export function MeuIdButton({
         return;
       }
       if (onMessage) onMessage(event);
+    };
+
+    window.onmessage = handleMessage;
+
+    dataWindow?.addEventListener('close', () => {
+      window.onmessage = null;
     });
   };
   return (

@@ -50,7 +50,6 @@ export function MeuIdButton({
   preseveIcon,
   className,
   onFinish,
-  onClick,
   onMessage,
   onLoad,
   theme,
@@ -61,6 +60,7 @@ export function MeuIdButton({
   const handleClick = (
     clickEvent: React.MouseEvent<HTMLButtonElement, MouseEvent>,
   ) => {
+    clickEvent.stopPropagation();
     const styleText =
       windowStyle?.text ??
       getSize({ width: windowStyle?.width, height: windowStyle?.height });
@@ -97,7 +97,6 @@ export function MeuIdButton({
       }
       if (onMessage) onMessage(event);
     });
-    if (onClick) onClick(clickEvent);
   };
   return (
     <button

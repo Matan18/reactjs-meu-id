@@ -41,7 +41,10 @@ export type MessageHandler = {
 
 export type ThemeOptions = 'white' | 'regular' | 'white-borderless';
 
-export type IMeuIdButton = React.ButtonHTMLAttributes<HTMLButtonElement> & {
+export type IMeuIdButton = Omit<
+  React.ButtonHTMLAttributes<HTMLButtonElement>,
+  'onClick'
+> & {
   children?: React.ReactNode;
 
   appId: string;
